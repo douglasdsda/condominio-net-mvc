@@ -7,7 +7,7 @@ namespace GerenciadorCondominios.BLL.Models
 {
     public class Usuario : IdentityUser<string>
     {
-        public int CPF { get; set; }
+        public string CPF { get; set; }
         public string Foto { get; set; }
 
         public bool PrimeiroAcesso { get; set; }

@@ -1,0 +1,11 @@
+﻿add-migration criacaoDB -- em ferramentas em console de de pacotes
+
+
+update-database
+
+
+
+cdn
+
+https://materializecss.com/getting-started.html
+https://code.jquery.com/

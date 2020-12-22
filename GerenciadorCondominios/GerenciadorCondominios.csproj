@@ -5,6 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\Images\30dd4051-6092-44a6-a318-6395d4c67f55IMG_20190407_100724440_HDR %281%29.jpg" />
+    <Content Remove="wwwroot\Images\41ae5084-4a07-42ac-98cf-4520ba708620IMG_20190407_100724440_HDR %281%29.jpg" />
+    <Content Remove="wwwroot\Images\4c8637ca-bdee-4e4d-859b-dd48657be639IMG_20190407_100724440_HDR %281%29.jpg" />
+    <Content Remove="wwwroot\Images\f4f836ff-6432-49e9-9693-fdc67a4b44a5IMG_20190407_100724440_HDR %281%29.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.2">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -14,11 +21,16 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\GerenciadorCondominios.BLL\GerenciadorCondominios.BLL.csproj" />
     <ProjectReference Include="..\GerenciadorCondominios.DAL\GerenciadorCondominios.DAL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\Images\" />
   </ItemGroup>
 
 </Project>
