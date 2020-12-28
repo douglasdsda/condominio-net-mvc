@@ -126,7 +126,20 @@ namespace GerenciadorCondominios.DAL.Repositorios
       }
     }
 
-    public async Task<IdentityResult> RemoverFuncoesUsuario(Usuario usuario, IEnumerable<string> funcoes)
+        public async Task<Usuario> PegarUsuarioPeloNome(ClaimsPrincipal usuario)
+        {
+            try
+            {
+                return await _gerenciadorUsuarios.FindByNameAsync(usuario.Identity.Name);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public async Task<IdentityResult> RemoverFuncoesUsuario(Usuario usuario, IEnumerable<string> funcoes)
     {
        try
       {

@@ -266,6 +266,12 @@ namespace GerenciadorCondominios.Controllers
             TempData["Atualizacao"] = $"As funções do usuário {usuario.UserName} foram atualizadas";
             return RedirectToAction(nameof(Index));
         }
-    }
 
+        [HttpGet]
+        public async Task<IActionResult> MinhasInformacoes()
+        {
+            return View(await _usuarioRepositorio.PegarUsuarioPeloNome(User));
+        }
+
+    }
 }

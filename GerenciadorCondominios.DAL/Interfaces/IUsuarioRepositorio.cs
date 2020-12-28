@@ -26,7 +26,7 @@ namespace GerenciadorCondominios.DAL.Interfaces
 
         Task<IdentityResult> IncluirUsuarioEmFuncoes(Usuario usuario, IEnumerable<string> funcoes);
 
-        // Task<Usuario> PegarUsuarioPeloNome(ClaimsPrincipal usuario);
+        Task<Usuario> PegarUsuarioPeloNome(ClaimsPrincipal usuario);
 
         // Task<Usuario> PegarUsuarioPeloId(string usuarioId);
 
