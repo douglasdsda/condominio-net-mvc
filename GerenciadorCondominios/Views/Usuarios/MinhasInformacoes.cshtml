@@ -3,11 +3,20 @@
     ViewData["Title"] = "Minhas Informações";
 }
 
-@* <partial name="_Confirmações" /> *@
+<partial name="_Confirmacoes" />
 
 <div class="card horizontal">
     <div class="card-image">
-        <i><img src="@Url.Content(Model.Foto)" height="250" /></i>
+         @{
+             Console.WriteLine($"Model: {Model}");
+             if(Model == null)
+             {
+                <h4>Sem foto</h4>
+             } else 
+             {
+                 <i><img src="@Url.Content(Model.Foto)" height="250" /></i>
+             }
+         }
     </div>
 
     <div class="card-stacked">
@@ -46,10 +55,32 @@
 </div>
 
 <div>
-  @*    @await Component.InvokeAsync("Veiculos", Model.Id) *@
+  @await Component.InvokeAsync("Veiculos", Model.Id)
 </div>
 
 <div>
-   @* <partial name="_Excluir" /> *@
+   <partial name="_ModalExcluir" /> 
 </div>
+
+@section Scripts {
+    <script>
+        function ConfirmarExclusao(id, nome) {
+            $('.modal').modal({
+                dismissble: true
+            });
+            $('#modal').modal('open');
+            $(".nome").text(nome);
+            $(".btnExcluir").on('click', function () {
+                $.ajax({
+                    method: "POST",
+                    url: "/Veiculos/Delete",
+                    data: { id: id },
+                    success: function (data) {
+                        location.reload(true);
+                    }
+                })
+            })
+        }
+    </script>
+}
 

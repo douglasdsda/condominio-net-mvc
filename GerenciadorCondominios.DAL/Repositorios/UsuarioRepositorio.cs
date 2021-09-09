@@ -35,7 +35,20 @@ namespace GerenciadorCondominios.DAL.Repositorios
             }
         }
 
-        public async Task<IdentityResult> CriarUsuario(Usuario usuario, string senha)
+    public string CodificarSenha(Usuario usuario, string senha)
+    {
+       try
+      {
+         return _gerenciadorUsuarios.PasswordHasher.HashPassword(usuario, senha);
+      }
+      catch (Exception ex)
+      {
+
+        throw ex;
+      }
+    }
+
+    public async Task<IdentityResult> CriarUsuario(Usuario usuario, string senha)
     {
       try
       {
@@ -100,7 +113,7 @@ namespace GerenciadorCondominios.DAL.Repositorios
       }
     }
 
-    public async Task<IEnumerable<string>> PegarFuncoesUsuario(Usuario usuario)
+    public async Task<IList<string>> PegarFuncoesUsuario(Usuario usuario)
     {
        try
       {
@@ -126,7 +139,20 @@ namespace GerenciadorCondominios.DAL.Repositorios
       }
     }
 
-        public async Task<Usuario> PegarUsuarioPeloNome(ClaimsPrincipal usuario)
+    public async Task<Usuario> PegarUsuarioPeloId(string usuarioId)
+    {
+        try
+      {
+        return await _gerenciadorUsuarios.FindByIdAsync(usuarioId);
+      }
+      catch (Exception ex)
+      {
+
+        throw ex;
+      }
+    }
+
+    public async Task<Usuario> PegarUsuarioPeloNome(ClaimsPrincipal usuario)
         {
             try
             {

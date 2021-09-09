@@ -9,3 +9,24 @@ cdn
 
 https://materializecss.com/getting-started.html
 https://code.jquery.com/
+
+
+
+gerar controller
+
+dotnet aspnet-codegenerator controller -name VeiculosController -m Veiculo -dc Contexto --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries
+dotnet aspnet-codegenerator controller -name EventosController -m Evento -dc Contexto --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries
+dotnet aspnet-codegenerator controller -name ServicosController -m Servico -dc Contexto --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries
+dotnet aspnet-codegenerator controller -name ApartamentosController -m Apartamento -dc Contexto --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries
+dotnet aspnet-codegenerator controller -name FuncoesController -m Funcao -dc Contexto --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries
+dotnet aspnet-codegenerator controller -name AlugueisController -m Aluguel -dc Contexto --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries
+dotnet aspnet-codegenerator controller -name PagamentosController -m Pagamento -dc Contexto --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries
+
+
+dotnet aspnet-codegenerator controller -name CotacoesController -m cotacoes -dc wcoreContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries
+dotnet aspnet-codegenerator controller -name ProdutoresController -m produtores -dc wcoreContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries
+dotnet aspnet-codegenerator controller -name PropriedadesController -m propriedades -dc wcoreContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries
+
+dotnet aspnet-codegenerator controller -name MarcasController -m marcas -dc wcoreContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries
+dotnet aspnet-codegenerator controller -name UnidadeMedidasController -m unidade_medidas -dc wcoreContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries
+dotnet aspnet-codegenerator controller -name MarcasController -m marcas -dc wcoreContext --relativeFolderPath Controllers --useDefaultLayout --referenceScriptLibraries
